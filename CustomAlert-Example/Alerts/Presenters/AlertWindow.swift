@@ -54,7 +54,7 @@ class AlertWindow: UIWindow {
     }
 }
 
-fileprivate class HoldingViewController: UIViewController, UIViewControllerTransitioningDelegate {
+fileprivate class HoldingViewController: UIViewController {
     let containerViewController: AlertContainerViewController
     
     // MARK: - Init
@@ -62,9 +62,6 @@ fileprivate class HoldingViewController: UIViewController, UIViewControllerTrans
     init(withViewController viewController: UIViewController) {
         containerViewController = AlertContainerViewController(withChildViewController: viewController)
         super.init(nibName: nil, bundle: nil)
-        
-        containerViewController.modalPresentationStyle = .custom
-        containerViewController.transitioningDelegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -87,15 +84,7 @@ fileprivate class HoldingViewController: UIViewController, UIViewControllerTrans
         })
     }
     
-    // MARK: - UIViewControllerTransitioningDelegate
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomAlertPresentAnimationController()
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomAlertDismissAnimationController()
-    }
 }
 
 fileprivate class AlertContainerViewController: UIViewController {
@@ -106,6 +95,9 @@ fileprivate class AlertContainerViewController: UIViewController {
     init(withChildViewController childViewController: UIViewController) {
         self.childViewController = childViewController
         super.init(nibName: nil, bundle: nil)
+        
+        self.modalPresentationStyle = .custom
+        self.transitioningDelegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -139,6 +131,18 @@ fileprivate class AlertContainerViewController: UIViewController {
             backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+}
+
+// MARK: UIViewControllerTransitioningDelegate
+
+extension AlertContainerViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomAlertPresentAnimationController()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomAlertDismissAnimationController()
     }
 }
 
