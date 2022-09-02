@@ -109,11 +109,7 @@ fileprivate class AlertContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.75)
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(backgroundView)
+        self.view.backgroundColor = .darkGray.withAlphaComponent(0.75)
         
         addChild(childViewController)
         view.addSubview(childViewController.view)
@@ -125,11 +121,6 @@ fileprivate class AlertContainerViewController: UIViewController {
             childViewController.view.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             childViewController.view.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 1),
             childViewController.view.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 1),
-            
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
