@@ -119,8 +119,8 @@ fileprivate class AlertContainerViewController: UIViewController {
         NSLayoutConstraint.activate([
             childViewController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             childViewController.view.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            childViewController.view.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 1),
-            childViewController.view.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 1),
+            childViewController.view.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor),
+            childViewController.view.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor),
         ])
     }
 }
