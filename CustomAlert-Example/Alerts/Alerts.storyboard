@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,7 +38,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="H0C-Az-aOn" firstAttribute="centerY" secondItem="CZp-hD-rKB" secondAttribute="centerY" constant="-29.5" id="9hk-Hm-eeA"/>
                                     <constraint firstAttribute="trailing" secondItem="H0C-Az-aOn" secondAttribute="trailing" constant="10" id="GPr-Fb-K06"/>
@@ -108,7 +109,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="GFd-Zl-QbV" firstAttribute="top" secondItem="Ncd-2R-P0A" secondAttribute="bottom" constant="5" id="A9K-Ia-F3R"/>
                                     <constraint firstItem="GFd-Zl-QbV" firstAttribute="centerX" secondItem="pgk-Uq-LEg" secondAttribute="centerX" id="HvA-IB-KRn"/>
@@ -163,5 +164,8 @@
     </scenes>
     <resources>
         <image name="error-circle" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
