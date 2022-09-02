@@ -85,9 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				3DA561462466F41C0004126F /* Presenters */,
-				3DA5614D2466F41C0004126F /* Storyboards */,
 				3DA561412466F41B0004126F /* ViewControllers */,
-				3DA561492466F41C0004126F /* ViewModels */,
+				3DB082C0246ED5E200B2ACC4 /* AlertViewModels.swift */,
+				3DA5614E2466F41C0004126F /* Alerts.storyboard */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -169,7 +169,8 @@
 		3DA561412466F41B0004126F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3DB082BA246ED5A800B2ACC4 /* Alerts */,
+				3DB082BB246ED5A800B2ACC4 /* InformationalAlertViewController.swift */,
+				3DB082BC246ED5A800B2ACC4 /* ErrorAlertViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -181,31 +182,6 @@
 				3DA561482466F41C0004126F /* AlertPresenter.swift */,
 			);
 			path = Presenters;
-			sourceTree = "<group>";
-		};
-		3DA561492466F41C0004126F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				3DB082C0246ED5E200B2ACC4 /* AlertViewModels.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		3DA5614D2466F41C0004126F /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				3DA5614E2466F41C0004126F /* Alerts.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		3DB082BA246ED5A800B2ACC4 /* Alerts */ = {
-			isa = PBXGroup;
-			children = (
-				3DB082BB246ED5A800B2ACC4 /* InformationalAlertViewController.swift */,
-				3DB082BC246ED5A800B2ACC4 /* ErrorAlertViewController.swift */,
-			);
-			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
