@@ -17,7 +17,11 @@ class AlertPresenter {
     // MARK: - Present
     
     func presentAlert(_ viewController: UIViewController) {
-        os_log(.info, "Alert being presented")
+        if #available(iOS 12.0, *) {
+            os_log(.info, "Alert being presented")
+        } else {
+            // Fallback on earlier versions
+        }
         
         let alertWindow = AlertWindow(withViewController: viewController)
         alertWindow.present()
@@ -32,7 +36,11 @@ class AlertPresenter {
             return
         }
         
-        os_log(.info, "Alert being dismissed")
+        if #available(iOS 12.0, *) {
+            os_log(.info, "Alert being dismissed")
+        } else {
+            // Fallback on earlier versions
+        }
         
         alertWindow.dismiss { [weak self] in
             self?.alertWindows.remove(alertWindow)
