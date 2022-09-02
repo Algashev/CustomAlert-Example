@@ -114,11 +114,13 @@
 			isa = PBXGroup;
 			children = (
 				3D5260DE2466F2620039684C /* Alerts */,
-				3D532D23227605E0002EE51F /* Application */,
 				3D3655C324753793003E3900 /* Extensions */,
-				3D532D28227605E0002EE51F /* Resources */,
-				3D532D1E227605E0002EE51F /* Storyboards */,
-				3D532D26227605E0002EE51F /* ViewControllers */,
+				3D532D24227605E0002EE51F /* AppDelegate.swift */,
+				3D532D27227605E0002EE51F /* ButtonViewController.swift */,
+				3D532D1F227605E0002EE51F /* LaunchScreen.storyboard */,
+				3D532D21227605E0002EE51F /* Main.storyboard */,
+				3D532D29227605E0002EE51F /* Assets.xcassets */,
+				3D532D25227605E0002EE51F /* Info.plist */,
 			);
 			path = "CustomAlert-Example";
 			sourceTree = "<group>";
@@ -130,40 +132,6 @@
 				3D532D15227604E3002EE51F /* Info.plist */,
 			);
 			path = "CustomAlert-ExampleTests";
-			sourceTree = "<group>";
-		};
-		3D532D1E227605E0002EE51F /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				3D532D1F227605E0002EE51F /* LaunchScreen.storyboard */,
-				3D532D21227605E0002EE51F /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		3D532D23227605E0002EE51F /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				3D532D24227605E0002EE51F /* AppDelegate.swift */,
-				3D532D25227605E0002EE51F /* Info.plist */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		3D532D26227605E0002EE51F /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				3D532D27227605E0002EE51F /* ButtonViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		3D532D28227605E0002EE51F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3D532D29227605E0002EE51F /* Assets.xcassets */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		3DA561412466F41B0004126F /* ViewControllers */ = {
