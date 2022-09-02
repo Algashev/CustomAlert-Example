@@ -19,9 +19,7 @@ class ButtonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showAlertsButton.layer.borderWidth = 1
-        showAlertsButton.layer.borderColor = showAlertsButton.tintColor.cgColor
-        showAlertsButton.layer.cornerRadius = 10
+        showAlertsButton.layer.cornerRadius = 8
     }
     
     // MARK: - Button
